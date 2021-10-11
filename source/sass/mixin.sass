@@ -1,0 +1,26 @@
+@mixin fstyle($font-size, $line-height, $color, $font-weight: 400, $transform : none)
+  font-size: $font-size
+  line-height: $line-height
+  color: $color
+  text-transform: $transform
+  font-weight: $font-weight
+
+@mixin absoluteElement($top, $left, $index: 0)
+  position: absolute
+  top: $top
+  left: $left
+  z-index: $index
+
+@mixin resetList()
+  list-style: none
+  margin: 0
+  padding: 0
+
+@mixin createPositionedCircle($top, $left, $width, $height, $bg-color)
+  position: absolute
+  top: $top
+  left: $left
+  width: $width
+  height: $height
+  background-color: $bg-color
+  border-radius: 50%

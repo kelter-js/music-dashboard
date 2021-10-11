@@ -1,0 +1,7 @@
+{
+  "name": "Music Dashboard",
+  "icons": [{
+      "src": "/img/fav-icon.png",
+      "sizes": "16x16"
+  }]
+}

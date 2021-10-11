@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="title" content="Music Dashboard">
+  <meta name="description" content="Music Dashboard - Music of your choice">
+  <title>Music Dashboard</title>
+  <link rel="preload" href="fonts/heebo-400.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/heebo-500.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/heebo-700.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/lancelot-400.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/source-sans-pro-600.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/source-sans-pro-700.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/heebo-400.woff" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/heebo-500.woff" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/heebo-700.woff" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/lancelot-400.woff" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/source-sans-pro-600.woff" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/source-sans-pro-700.woff" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="img//icons/fav-icon.png" sizes="16x16" type="image/png">
+  <link rel="manifest" href="manifest.json">
+</head>
+
+<body>
+  <header class="page-header">
+    <a class="page-header__logo" href="#" title="Home"></a>
+    <div class="page-header__navigation-wrapper">
+      <nav class="navigation">
+        <ul class="navigation__list">
+          <li class="navigation__item navigation__item--current">
+            <a class="navigation__link navigation__link--home" href="#" title="Home">
+              <span aria-hidden="true" class="visually-hidden">
+                Home
+              </span>
+            </a>
+          </li>
+          <li class="navigation__item">
+            <a class="navigation__link navigation__link--chart" href="#" title="Chart">
+              <span aria-hidden="true" class="visually-hidden">
+                Chart
+              </span>
+            </a>
+          </li>
+          <li class="navigation__item">
+            <a class="navigation__link navigation__link--files" href="#" title="Files">
+              <span aria-hidden="true" class="visually-hidden">
+                Files
+              </span>
+            </a>
+          </li>
+          <li class="navigation__item">
+            <a class="navigation__link navigation__link--messages navigation__link--notifications" href="#" title="Messages">
+              <span aria-hidden="true" class="visually-hidden">
+                Messages
+              </span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <div class="info-block">
+        <a class="info-block__help-link" href="#">
+          Help
+        </a>
+        <button class="info-block__change-language" type="button" aria-label="Select page language">EN</button>
+      </div>
+    </div>
+    <div class="page-header__user-block">
+      <p class="page-header__current-listeners">
+        8 people listening you
+      </p>
+      <div class="page-header__user-wrapper">
+        <div class="page-header__profile">
+          <div class="page-header__profile-name">
+            <p class="page-header__user-name">
+              Carlos López
+            </p>
+            <p class="page-header__user-type">
+              Artist
+            </p>
+          </div>
+          <picture>
+          </picture>
+          <button class="page-header__show-more-options" type="button"></button>
+        </div>
+        <div class="page-header__user-controls">
+          <button class="page-header__control-button page-header__control-button--show-notifications" type="button">
+            <span class="visually-hidden">
+              Show current notifications
+            </span>
+          </button>
+          <button class="page-header__control-button page-header__control-button--logout" type="button">
+            <span class="visually-hidden">
+              Logout from profile
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main class="page-main">
+  </main>
+</body>
+
+</html>

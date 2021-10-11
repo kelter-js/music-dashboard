@@ -1,0 +1,44 @@
+.navigation__list
+  position: relative
+
+  @include resetList()
+
+.navigation__item
+  height: 54px
+  width: 85px
+  position: relative
+  margin-bottom: 18px
+
+  &:last-of-type
+    margin-bottom: 0
+
+.navigation__item--current
+  background-color: $light-white
+  border-radius: 6px 0 0 6px
+
+.navigation__link
+  position: relative
+  height: 24px
+  width: 25px
+  margin-left: -12.5px
+  background-repeat: no-repeat
+
+  @include absoluteElement(17px, 50%, 1)
+
+.navigation__link--home
+  background-image: url("data:image/svg+xml,%3Csvg width='22' height='20' viewBox='0 0 22 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M21.8785 9.07895L10.9393 0L0 9.07895H2.51822V20H19.3603V9.07895H21.8785Z' fill='%230094B6'/%3E%3C/svg%3E%0A")
+
+.navigation__link--chart
+  background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2 12V21H6V12H2Z' fill='%234A4E68' stroke='%23969CBA' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M18 7V21H22V7H18Z' fill='%234A4E68' stroke='%23969CBA' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M10 3V21H14V3H10Z' fill='%234A4E68' stroke='%23969CBA' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A")
+
+.navigation__link--files
+  background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M13 2H6C5.46957 2 4.96086 2.21071 4.58579 2.58579C4.21071 2.96086 4 3.46957 4 4V20C4 20.5304 4.21071 21.0391 4.58579 21.4142C4.96086 21.7893 5.46957 22 6 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V9L13 2Z' fill='%23969CBA' fill-opacity='0.2' stroke='%23969CBA' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M13 2V9H20' stroke='%23969CBA' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A")
+
+.navigation__link--messages
+  background-image: url("data:image/svg+xml,%3Csvg width='22' height='24' viewBox='0 0 22 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M19 1H3C1.9 1 1 1.9 1 3V21L5 17H19C20.1 17 21 16.1 21 15V3C21 1.9 20.1 1 19 1Z' fill='%234A4E68' stroke='%23969CBA' stroke-width='2'/%3E%3C/svg%3E%0A")
+
+.navigation__link--notifications
+  &::before
+    content: ""
+
+    @include createPositionedCircle(-3px, 16px, 10px, 10px, $light-white)
