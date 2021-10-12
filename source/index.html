@@ -11,12 +11,14 @@
   <link rel="preload" href="fonts/heebo-500.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="preload" href="fonts/heebo-700.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="preload" href="fonts/lancelot-400.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/source-sans-pro-400.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="preload" href="fonts/source-sans-pro-600.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="preload" href="fonts/source-sans-pro-700.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="preload" href="fonts/heebo-400.woff" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="preload" href="fonts/heebo-500.woff" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="preload" href="fonts/heebo-700.woff" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="preload" href="fonts/lancelot-400.woff" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/source-sans-pro-400.woff" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="preload" href="fonts/source-sans-pro-600.woff" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="preload" href="fonts/source-sans-pro-700.woff" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.css">
@@ -52,7 +54,8 @@
             </a>
           </li>
           <li class="navigation__item">
-            <a class="navigation__link navigation__link--messages navigation__link--notifications" href="#" title="Messages">
+            <a class="navigation__link navigation__link--messages navigation__link--notifications" href="#"
+              title="Messages">
               <span aria-hidden="true" class="visually-hidden">
                 Messages
               </span>
@@ -83,7 +86,8 @@
           </div>
           <picture>
             <source type="image/webp" srcset="img/profile-picture.webp 1x, img/profile-picture@2x.webp 2x">
-            <img class="user__profile-picture" src="img/profile-picture.jpg" srcset="img/profile-picture@2x.jpg 2x" alt="User profile picture">
+            <img class="user__profile-picture" src="img/profile-picture.jpg" srcset="img/profile-picture@2x.jpg 2x"
+              alt="User profile picture">
           </picture>
           <button class="user__show-more-options" type="button">
             <span class="visually-hidden">
@@ -92,7 +96,9 @@
           </button>
         </div>
         <div class="user__controls">
-          <button class="user__control-button user__control-button--show-notifications" type="button">
+          <button
+            class="user__control-button user__control-button--show-notifications user__control-button--new-notifications"
+            type="button">
             <span class="visually-hidden">
               Show current notifications
             </span>
@@ -107,6 +113,488 @@
     </div>
   </header>
   <main class="page-main">
+    <section class="search">
+      <h2 class="visually-hidden">
+        Type name of your favorite artist
+      </h2>
+      <form class="search__form" action="https://echo.somewhereelse.com/" method="post">
+        <label class="visually-hidden" for="artist">
+          For example, Rolling Stones
+        </label>
+        <input class="search__search-field" type="search" name="artist" id="artist"
+          placeholder="Search for new music, news, artists...">
+        <button type="submit" class="visually-hidden">
+          Search!
+        </button>
+      </form>
+    </section>
+
+    <section class="trendings">
+      <h2 class="main-headers">
+        Trendings
+      </h2>
+      <picture>
+        <source type="image/webp" srcset="img/main-promo.webp 1x, img/main-promo@2x.webp 2x">
+        <img class="trendings__main-picture" src="img/main-promo.jpg" srcset="img/main-promo@2x.jpg 2x" alt="Picture of people on live perfomance">
+      </picture>
+      <div class="trendings__current-slider">
+        <h3 class="trendings__slider-header">
+          // Trending
+        </h3>
+        <p class="trendings__slider-text">
+          Red Snapper: Performance Review
+        </p>
+        <p class="trendings__slider-author">
+          - Kamelia
+        </p>
+        <div class="trendings__slider-controls">
+          <button class="trendings__slider-button trendings__slider-button--play" type="button">
+            Play
+          </button>
+          <button class="trendings__slider-button trendings__slider-button--share" type="button">
+            <span class="visually-hidden">
+              Share song
+            </span>
+          </button>
+        </div>
+      </div>
+      <ul class="trendings__slider-list">
+        <li class="trendings__slider-item">
+          <button class="trendings__slider-toggler" type="button">
+            <span class="visually-hidden">
+              Next slider
+            </span>
+          </button>
+        </li>
+        <li class="trendings__slider-item">
+          <button class="trendings__slider-toggler trendings__slider-toggler--current" type="button">
+            <span class="visually-hidden">
+              Next slider
+            </span>
+          </button>
+        </li>
+        <li class="trendings__slider-item">
+          <button class="trendings__slider-toggler" type="button">
+            <span class="visually-hidden">
+              Next slider
+            </span>
+          </button>
+        </li>
+        <li class="trendings__slider-item">
+          <button class="trendings__slider-toggler" type="button">
+            <span class="visually-hidden">
+              Next slider
+            </span>
+          </button>
+        </li>
+        <li class="trendings__slider-item">
+          <button class="trendings__slider-toggler" type="button">
+            <span class="visually-hidden">
+              Next slider
+            </span>
+          </button>
+        </li>
+      </ul>
+    </section>
+
+    <section class="weekly-artist">
+      <h2 class="main-headers">
+        Artist of the week
+      </h2>
+      <div class="weekly-artist__artist-wrapper">
+        <h3 class="weekly-artist__artist-name">
+          Monica Lee
+        </h3>
+        <picture>
+          <source type="image/webp" srcset="img/artist-picture.webp 1x, img/artist-picture@2x.webp 2x">
+          <img class="weekly-artist__artist-picture" src="img/artist-picture.png" srcset="img/artist-picture@2x.png 2x" alt="Monica Lee by herserlf">
+        </picture>
+        <div class="weekly-artist__album-wrapper">
+          <p class="weekly-artist__annotation weekly-artist__annotation--type">
+            // Album
+          </p>
+          <p class="weekly-artist__annotation weekly-artist__annotation--title">
+            Always Authentic
+          </p>
+          <p class="weekly-artist__annotation weekly-artist__annotation--name">
+            Monica Lee
+          </p>
+          <p class="weekly-artist__annotation weekly-artist__annotation--review">
+            The artists we represent are one of the most successful in Virginia and also were a huge breakthrough in the international market, topping radio and sales around the world.
+          </p>
+          <ul class="weekly-artist__album">
+            <li class="weekly-artist__song">
+              <p class="weekly-artist__song-info weekly-artist__song-info--number">
+                1
+              </p>
+              <button class="weekly-artist__song-button weekly-artist__song-button--like" type="button">
+                <span class="visually-hidden">
+                  Like
+                </span>
+              </button>
+              <p class="weekly-artist__song-info weekly-artist__song-info--name">
+                No more time
+              </p>
+              <p class="weekly-artist__song-info weekly-artist__song-info--listen-counter">
+                42,822
+              </p>
+              <p class="weekly-artist__song-info weekly-artist__song-info--length">
+                3:21
+              </p>
+              <button class="weekly-artist__song-button weekly-artist__song-button--download" type="button">
+                <span class="visually-hidden">
+                  Download
+                </span>
+              </button>
+              <button class="weekly-artist__song-button weekly-artist__song-button--share" type="button">
+                <span class="visually-hidden">
+                  Share
+                </span>
+              </button>
+              <button class="weekly-artist__song-button weekly-artist__song-button--options" type="button">
+                <span class="visually-hidden">
+                  Options
+                </span>
+              </button>
+            </li>
+            <li class="weekly-artist__song weekly-artist__song--current-song">
+              <p class="weekly-artist__song-info weekly-artist__song-info--number">
+
+              </p>
+              <button class="weekly-artist__song-button weekly-artist__song-button--like" type="button">
+                <span class="visually-hidden">
+                  Like
+                </span>
+              </button>
+              <p class="weekly-artist__song-info weekly-artist__song-info--name">
+                Go away
+              </p>
+              <p class="weekly-artist__song-info weekly-artist__song-info--listen-counter">
+                67,420
+              </p>
+              <p class="weekly-artist__song-info weekly-artist__song-info--length">
+                3:30
+              </p>
+              <button class="weekly-artist__song-button weekly-artist__song-button--download" type="button">
+                <span class="visually-hidden">
+                  Download
+                </span>
+              </button>
+              <button class="weekly-artist__song-button weekly-artist__song-button--share" type="button">
+                <span class="visually-hidden">
+                  Share
+                </span>
+              </button>
+              <button class="weekly-artist__song-button weekly-artist__song-button--options" type="button">
+                <span class="visually-hidden">
+                  Options
+                </span>
+              </button>
+            </li>
+            <li class="weekly-artist__song">
+              <p class="weekly-artist__song-info weekly-artist__song-info--number">
+                3
+              </p>
+              <button class="weekly-artist__song-button weekly-artist__song-button--like" type="button">
+                <span class="visually-hidden">
+                  Like
+                </span>
+              </button>
+              <p class="weekly-artist__song-info weekly-artist__song-info--name">
+                With you
+              </p>
+              <p class="weekly-artist__song-info weekly-artist__song-info--listen-counter">
+                38,556
+              </p>
+              <p class="weekly-artist__song-info weekly-artist__song-info--length">
+                3:56
+              </p>
+              <button class="weekly-artist__song-button weekly-artist__song-button--download" type="button">
+                <span class="visually-hidden">
+                  Download
+                </span>
+              </button>
+              <button class="weekly-artist__song-button weekly-artist__song-button--share" type="button">
+                <span class="visually-hidden">
+                  Share
+                </span>
+              </button>
+              <button class="weekly-artist__song-button weekly-artist__song-button--options" type="button">
+                <span class="visually-hidden">
+                  Options
+                </span>
+              </button>
+            </li>
+            <li class="weekly-artist__song">
+              <p class="weekly-artist__song-info weekly-artist__song-info--number">
+                4
+              </p>
+              <button class="weekly-artist__song-button weekly-artist__song-button--like" type="button">
+                <span class="visually-hidden">
+                  Like
+                </span>
+              </button>
+              <p class="weekly-artist__song-info weekly-artist__song-info--name">
+                Always authentic
+              </p>
+              <p class="weekly-artist__song-info weekly-artist__song-info--listen-counter">
+                35,820
+              </p>
+              <p class="weekly-artist__song-info weekly-artist__song-info--length">
+                3:30
+              </p>
+              <button class="weekly-artist__song-button weekly-artist__song-button--download" type="button">
+                <span class="visually-hidden">
+                  Download
+                </span>
+              </button>
+              <button class="weekly-artist__song-button weekly-artist__song-button--share" type="button">
+                <span class="visually-hidden">
+                  Share
+                </span>
+              </button>
+              <button class="weekly-artist__song-button weekly-artist__song-button--options" type="button">
+                <span class="visually-hidden">
+                  Options
+                </span>
+              </button>
+            </li>
+            <li class="weekly-artist__song">
+              <p class="weekly-artist__song-info weekly-artist__song-info--number">
+                5
+              </p>
+              <button class="weekly-artist__song-button weekly-artist__song-button--like" type="button">
+                <span class="visually-hidden">
+                  Like
+                </span>
+              </button>
+              <p class="weekly-artist__song-info weekly-artist__song-info--name">
+                No more show
+              </p>
+              <p class="weekly-artist__song-info weekly-artist__song-info--listen-counter">
+                51,432
+              </p>
+              <p class="weekly-artist__song-info weekly-artist__song-info--length">
+                4:01
+              </p>
+              <button class="weekly-artist__song-button weekly-artist__song-button--download" type="button">
+                <span class="visually-hidden">
+                  Download
+                </span>
+              </button>
+              <button class="weekly-artist__song-button weekly-artist__song-button--share" type="button">
+                <span class="visually-hidden">
+                  Share
+                </span>
+              </button>
+              <button class="weekly-artist__song-button weekly-artist__song-button--options" type="button">
+                <span class="visually-hidden">
+                  Options
+                </span>
+              </button>
+            </li>
+          </ul>
+          <a class="weekly-artist__full-album" href="#">
+            Listen to full album
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="news">
+      <h2 class="news__header">
+        More news
+      </h2>
+      <ul class="news__list">
+        <li class="news__item">
+          <picture>
+            <source type="image/webp" srcset="img/profile-picture.webp 1x, img/profile-picture@2x.webp 2x">
+            <img class="weekly-artist__artist-picture" src="img/profile-picture.jpg"
+              srcset="img/profile-picture@2x.jpg 2x" alt="Monica Lee by herserlf">
+          </picture>
+          <a href="#">Thomas Bank</a>
+          <p>Working in his new album in 2021</p>
+        </li>
+        <li class="news__item">
+          <picture>
+            <source type="image/webp" srcset="img/profile-picture.webp 1x, img/profile-picture@2x.webp 2x">
+            <img class="weekly-artist__artist-picture" src="img/profile-picture.jpg"
+              srcset="img/profile-picture@2x.jpg 2x" alt="Monica Lee by herserlf">
+          </picture>
+          <a href="#">Art</a>
+          <p>Music and museums</p>
+        </li>
+        <li class="news__item">
+          <picture>
+            <source type="image/webp" srcset="img/profile-picture.webp 1x, img/profile-picture@2x.webp 2x">
+            <img class="weekly-artist__artist-picture" src="img/profile-picture.jpg"
+              srcset="img/profile-picture@2x.jpg 2x" alt="Monica Lee by herserlf">
+          </picture>
+          <a href="#">News</a>
+          <p>Chill out for our mind</p>
+        </li>
+        <li class="news__item">
+          <picture>
+            <source type="image/webp" srcset="img/profile-picture.webp 1x, img/profile-picture@2x.webp 2x">
+            <img class="weekly-artist__artist-picture" src="img/profile-picture.jpg"
+              srcset="img/profile-picture@2x.jpg 2x" alt="Monica Lee by herserlf">
+          </picture>
+          <a href="#">Thomas Bank</a>
+          <p>Working in his new album in 2021</p>
+        </li>
+        <li class="news__item">
+          <picture>
+            <source type="image/webp" srcset="img/profile-picture.webp 1x, img/profile-picture@2x.webp 2x">
+            <img class="weekly-artist__artist-picture" src="img/profile-picture.jpg"
+              srcset="img/profile-picture@2x.jpg 2x" alt="Monica Lee by herserlf">
+          </picture>
+          <a href="#">Thomas Bank</a>
+          <p>Working in his new album in 2021</p>
+        </li>
+      </ul>
+    </section>
+
+    <section class="genres">
+      <h2>
+        Popular genres
+      </h2>
+      <ul>
+        <li>
+          <button type="button">
+
+          </button>
+        </li>
+        <li>
+          <button type="button">
+
+          </button>
+        </li>
+        <li>
+          <button type="button">
+
+          </button>
+        </li>
+        <li>
+          <button type="button">
+
+          </button>
+        </li>
+        <li>
+          <button type="button">
+
+          </button>
+        </li>
+        <li>
+          <button type="button">
+
+          </button>
+        </li>
+        <li>
+          <button type="button">
+
+          </button>
+        </li>
+        <li>
+          <button type="button">
+
+          </button>
+        </li>
+        <li>
+          <button type="button">
+
+          </button>
+        </li>
+        <li>
+          <button type="button">
+
+          </button>
+        </li>
+        <li>
+          <button type="button">
+
+          </button>
+        </li>
+        <li>
+          <button type="button">
+
+          </button>
+        </li>
+        <li>
+          <button type="button">
+
+          </button>
+        </li>
+        <li>
+          <button type="button">
+
+          </button>
+        </li>
+      </ul>
+
+      <ul>
+        <li>
+          <picture>
+            <source type="image/webp" srcset="img/profile-picture.webp 1x, img/profile-picture@2x.webp 2x">
+            <img class="weekly-artist__artist-picture" src="img/profile-picture.jpg"
+              srcset="img/profile-picture@2x.jpg 2x" alt="Monica Lee by herserlf">
+          </picture>
+          <a href="">
+
+          </a>
+        </li>
+        <li>
+          <picture>
+            <source type="image/webp" srcset="img/profile-picture.webp 1x, img/profile-picture@2x.webp 2x">
+            <img class="weekly-artist__artist-picture" src="img/profile-picture.jpg"
+              srcset="img/profile-picture@2x.jpg 2x" alt="Monica Lee by herserlf">
+          </picture>
+          <a href="">
+
+          </a>
+        </li>
+        <li>
+          <picture>
+            <source type="image/webp" srcset="img/profile-picture.webp 1x, img/profile-picture@2x.webp 2x">
+            <img class="weekly-artist__artist-picture" src="img/profile-picture.jpg"
+              srcset="img/profile-picture@2x.jpg 2x" alt="Monica Lee by herserlf">
+          </picture>
+          <a href="">
+
+          </a>
+        </li>
+        <li>
+          <picture>
+            <source type="image/webp" srcset="img/profile-picture.webp 1x, img/profile-picture@2x.webp 2x">
+            <img class="weekly-artist__artist-picture" src="img/profile-picture.jpg"
+              srcset="img/profile-picture@2x.jpg 2x" alt="Monica Lee by herserlf">
+          </picture>
+          <a href="">
+
+          </a>
+        </li>
+        <li>
+          <picture>
+            <source type="image/webp" srcset="img/profile-picture.webp 1x, img/profile-picture@2x.webp 2x">
+            <img class="weekly-artist__artist-picture" src="img/profile-picture.jpg"
+              srcset="img/profile-picture@2x.jpg 2x" alt="Monica Lee by herserlf">
+          </picture>
+          <a href="">
+
+          </a>
+        </li>
+        <li>
+          <picture>
+            <source type="image/webp" srcset="img/profile-picture.webp 1x, img/profile-picture@2x.webp 2x">
+            <img class="weekly-artist__artist-picture" src="img/profile-picture.jpg"
+              srcset="img/profile-picture@2x.jpg 2x" alt="Monica Lee by herserlf">
+          </picture>
+          <a href="">
+
+          </a>
+        </li>
+      </ul>
+
+    </section>
   </main>
 </body>
 
