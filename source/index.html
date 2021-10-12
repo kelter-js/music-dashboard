@@ -71,27 +71,33 @@
       <p class="page-header__current-listeners">
         8 people listening you
       </p>
-      <div class="page-header__user-wrapper">
-        <div class="page-header__profile">
-          <div class="page-header__profile-name">
-            <p class="page-header__user-name">
+      <div class="user">
+        <div class="user__profile">
+          <div class="user__profile-name">
+            <p class="user__user-name">
               Carlos López
             </p>
-            <p class="page-header__user-type">
+            <p class="user__user-type">
               Artist
             </p>
           </div>
           <picture>
+            <source type="image/webp" srcset="img/profile-picture.webp 1x, img/profile-picture@2x.webp 2x">
+            <img class="user__profile-picture" src="img/profile-picture.jpg" srcset="img/profile-picture@2x.jpg 2x" alt="User profile picture">
           </picture>
-          <button class="page-header__show-more-options" type="button"></button>
+          <button class="user__show-more-options" type="button">
+            <span class="visually-hidden">
+              More options
+            </span>
+          </button>
         </div>
-        <div class="page-header__user-controls">
-          <button class="page-header__control-button page-header__control-button--show-notifications" type="button">
+        <div class="user__controls">
+          <button class="user__control-button user__control-button--show-notifications" type="button">
             <span class="visually-hidden">
               Show current notifications
             </span>
           </button>
-          <button class="page-header__control-button page-header__control-button--logout" type="button">
+          <button class="user__control-button user__control-button--logout" type="button">
             <span class="visually-hidden">
               Logout from profile
             </span>
