@@ -2,31 +2,37 @@
   position: absolute
   bottom: 25px
   left: 0
+  display: flex
+  flex-wrap: wrap
   min-height: 61px
-  padding-top: 14px
+  padding-top: 20px
   padding-left: 28px
   border-top: 1px solid $grey
 
 .info-block__change-language
   position: relative
-  margin-top: 15px
+  height: 30px
+  width: 45px
   padding: 0
-  padding-right: 6px
   border: none
   background: none
   cursor: pointer
+  text-align: left
 
   &::before
     content: ""
     position: absolute
-    top: 2px
-    right: -10px
+    top: 12px
+    right: 0
     height: 8px
     width: 13px
-    background-image:
+    background-image: url("data:image/svg+xml,%3Csvg width='13' height='8' viewBox='0 0 13 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.13037 1L6.26081 7L11.3912 1' stroke='%236F809E' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A")
 
 .info-block__help-link
-  margin-bottom: 23px
+  display: inline-block
+  vertical-align: middle
+  height: 30px
+  width: 45px
   text-decoration: none
 
 .info-block__help-link,
