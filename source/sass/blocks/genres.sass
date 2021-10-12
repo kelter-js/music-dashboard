@@ -1,0 +1,52 @@
+.genres__list
+  display: flex
+  flex-wrap: wrap
+
+  @include resetList()
+
+  margin-bottom: 15px
+
+.genres__toggler
+  border
+  padding: 10px 17px 10px 17px
+  background: none
+  border: none
+  border-radius: 6px
+  border: 1px solid $dark-blue-shape
+
+  @include fstyle(11px, 12px, $dark-blue-shape)
+
+.genres__item
+  margin-right: 11px
+  margin-bottom: 16px
+
+  &:last-of-type
+    margin-right: 0
+
+.genres__toggler--current
+  padding: 11px 18px 11px 18px
+  border: none
+  color: $white
+  background-color: $bright-blue
+  font-family: "Source Sans Pro", "Arial", sans-serif
+  font-weight: 600
+
+.genres__artists-list
+  display: flex
+
+  @include resetList()
+
+.genres__artist
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+  margin-right: 41.2px
+
+.genres__artist-profile
+  text-decoration: none
+
+  @include fstyle(12px, 14px, $light-black, 500)
+
+.genres__artist-picture
+  margin-bottom: 7.5px
