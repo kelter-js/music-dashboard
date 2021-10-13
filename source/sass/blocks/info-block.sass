@@ -1,13 +1,12 @@
 .info-block
-  position: absolute
-  bottom: 25px
-  left: 0
   display: flex
   flex-wrap: wrap
   min-height: 61px
   padding-top: 20px
   padding-left: 28px
   border-top: 1px solid $grey
+
+  @include absoluteElementBottomLeft(25px, 0)
 
 .info-block__change-language
   position: relative
@@ -21,12 +20,11 @@
 
   &::before
     content: ""
-    position: absolute
-    top: 12px
-    right: 0
     height: 8px
     width: 13px
     background-image: url("data:image/svg+xml,%3Csvg width='13' height='8' viewBox='0 0 13 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.13037 1L6.26081 7L11.3912 1' stroke='%236F809E' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A")
+
+    @include absoluteElementTopRight(12px, 0)
 
 .info-block__help-link
   display: inline-block

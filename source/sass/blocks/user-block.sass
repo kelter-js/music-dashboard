@@ -11,12 +11,11 @@
 
   &::before
     content: ""
-    position: absolute
-    top: -1px
-    right: -25px
     height: 64px
     width: 1px
     background-color: $darker-white
+
+    @include absoluteElementTopRight(-1px, -25px)
 
 .user__profile-picture
   height: 55px

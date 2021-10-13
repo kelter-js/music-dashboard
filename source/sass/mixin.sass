@@ -5,10 +5,28 @@
   text-transform: $transform
   font-weight: $font-weight
 
-@mixin absoluteElement($top, $left, $index: 0)
+@mixin absoluteElementTopLeft($top, $left, $index: 0)
   position: absolute
   top: $top
   left: $left
+  z-index: $index
+
+@mixin absoluteElementBottomLeft($bottom, $left, $index: 0)
+  position: absolute
+  left: $left
+  bottom: $bottom
+  z-index: $index
+
+@mixin absoluteElementTopRight($top, $right, $index: 0)
+  position: absolute
+  top: $top
+  right: $right
+  z-index: $index
+
+@mixin absoluteElementBottomRight($bottom, $right, $index: 0)
+  position: absolute
+  right: $right
+  bottom: $bottom
   z-index: $index
 
 @mixin resetList()
